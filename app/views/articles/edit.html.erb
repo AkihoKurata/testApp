@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Edit post</h1>
+<%= link_to "Back", articles_path %>
+<br>
+<%= form_for @article, method: :patch do |f| %>
+<div clas="form-group">
+	<%= f.label :title %>
+	<%= f.text_field :title, class: "form-control", placeholder: "Enter your title" %>	
+</div>
+
+<div class="form-group">
+	<%= f.label :content %>
+	<%= f.text_area :content, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.submit "Update", class: "float-right" %>
+<% end %>
+</div>
